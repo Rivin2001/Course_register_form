@@ -8,6 +8,8 @@ import edu.icet.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class StudentServiceimpl implements StudentService {
 
@@ -23,9 +25,12 @@ public class StudentServiceimpl implements StudentService {
         studententity entity  = mapper.convertValue(student,studententity.class);
         return studentRepository.save(entity);
 
-
-
     }
+
+//    public List<Student> retriveStudent(){
+//
+//        return ;
+//    }
 
 
 

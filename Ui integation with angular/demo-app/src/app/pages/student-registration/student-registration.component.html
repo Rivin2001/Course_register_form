@@ -1,13 +1,16 @@
 <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label">First name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your first name">
+    <input type="text" class="form-control" [(ngModel)]="student.firstname" id="formGroupExampleInput" placeholder="Enter your first name">
   </div>
   <div class="mb-3">
     <label for="formGroupExampleInput2" class="form-label">Last name</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your last name">
+    <input type="text" class="form-control" [(ngModel)]="student.lastname"  id="formGroupExampleInput2" placeholder="Enter your last name">
   </div>
 
-
+  <div class="mb-3">
+    <label for="formGroupExampleInput3" class="form-label">Contact number</label>
+    <input type="text" class="form-control" [(ngModel)]="student.contactnumber" id="formGroupExampleInput3" placeholder="Enter your Contact number">
+  </div>
 
 
 <form class="row g-3">
@@ -42,15 +45,8 @@
       <label for="inputZip" class="form-label">Zip</label>
       <input type="text" class="form-control" id="inputZip">
     </div>
+  
     <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Agree To Terms
-        </label>
-      </div>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <button type="submit" (click)="createnewstudent()" class="btn btn-primary">Sign in</button>
     </div>
   </form>

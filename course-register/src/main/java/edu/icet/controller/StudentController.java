@@ -5,13 +5,12 @@ import edu.icet.dto.Student;
 import edu.icet.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+import java.util.List;
 @CrossOrigin
+@RestController
+
 
 public class StudentController {
 
@@ -24,6 +23,13 @@ public class StudentController {
         return services.createstudent(student);
 
     }
+
+//    @GetMapping
+//    List<Student> getstudentlist(){
+//        return services.retriveStudent();
+//    }
+
+
 }
 
 

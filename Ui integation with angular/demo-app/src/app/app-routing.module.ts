@@ -25,7 +25,7 @@ const routes: Routes = [
     path:"students",
     component:StudentListComponent
   }
-
+ 
 
 
 ];

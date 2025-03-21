@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +8,30 @@ import { Component } from '@angular/core';
   styleUrl: './student-registration.component.css'
 })
 export class StudentRegistrationComponent {
+
+private http;
+ constructor(private httpClient:HttpClient){
+  this.http = httpClient;
+ }
+
+ //json object creation to send the postmapping
+ public student = {
+   
+    firstname:null,
+    lastname:null,
+    contactnumber:null
+ }
+
+  
+ 
+ createnewstudent(){
+     this.http.post("http://localhost:8080/student",this.student)
+   .subscribe(data =>{
+       console.log(data);
+   }
+
+  )
+ }
+
 
 }
