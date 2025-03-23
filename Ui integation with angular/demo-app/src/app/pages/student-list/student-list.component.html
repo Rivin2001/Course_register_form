@@ -1,4 +1,4 @@
-<table class="table" class="table table-bordered">
+<table class="table" class="table table-bordered" *ngIf="studentlist">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -8,18 +8,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>mdo</td>
+      <tr *ngFor="let student of studentlist; let i =index;">
+        <th scope="row">{{i}}</th>
+        <td>{{student.firstname}}</td>
+        <td>{{student.lastname}}</td>
+        <td>{{student.contactnumber}}</td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>fat</td>
-      </tr>
+    
       
     </tbody>
   </table>

@@ -4,13 +4,12 @@ import edu.icet.Entity.studententity;
 import edu.icet.dto.Student;
 import edu.icet.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-@CrossOrigin
-@RestController
 
+@RestController
+@CrossOrigin
 
 public class StudentController {
 
@@ -24,10 +23,10 @@ public class StudentController {
 
     }
 
-//    @GetMapping
-//    List<Student> getstudentlist(){
-//        return services.retriveStudent();
-//    }
+    @GetMapping("/studentlist")
+    public List<Student> getstudentlist(){
+        return services.retriveStudent();
+    }
 
 
 }

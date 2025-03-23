@@ -20,8 +20,6 @@ public class CourseController {
     @GetMapping("/Courses")
 
     public List<Course> createNewCourse(){
-
-
         return courseservice.createNewCourse();
 
 

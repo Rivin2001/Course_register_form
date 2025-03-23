@@ -10,5 +10,5 @@ public interface StudentService {
     public studententity createstudent(Student student);
 
 
-//    List<Student> retriveStudent();
+    List<Student> retriveStudent();
 }

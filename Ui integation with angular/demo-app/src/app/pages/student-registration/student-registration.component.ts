@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class StudentRegistrationComponent {
 
-private http;
+public http;
  constructor(private httpClient:HttpClient){
   this.http = httpClient;
  }
@@ -23,7 +23,7 @@ private http;
  }
 
   
- 
+
  createnewstudent(){
      this.http.post("http://localhost:8080/student",this.student)
    .subscribe(data =>{
