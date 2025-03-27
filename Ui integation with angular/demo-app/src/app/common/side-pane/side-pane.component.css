@@ -2,5 +2,17 @@
 
    position:absolute;
    left: 0px;
+   
+}
+
+.me-2{
+
+background-image: url("/demo-app/src/assets/images/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+
 
 }

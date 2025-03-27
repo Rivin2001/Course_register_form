@@ -1,17 +1,25 @@
-.mb-md-0{
+/* .mb-md-0{
 
   position: fixed;
     left: 500px;
     align-content: center;
     color: black;
+    font-size: 18px;
+  
 
-}
 
-.me-2{
+    
 
-  position: fixed;
-    left: 1000px;
+} */
+.container{
+
+    position:static  
     align-content: center;
-
+    color: black;
+    font-size: 18px;
 }
+
+
+
+
 
