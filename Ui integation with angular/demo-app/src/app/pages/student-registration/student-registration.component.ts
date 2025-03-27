@@ -25,6 +25,9 @@ public http;
   
 
  createnewstudent(){
+
+  
+  
      this.http.post("http://localhost:8080/student",this.student)
    .subscribe(data =>{
        console.log(data);

@@ -12,6 +12,8 @@ import { SidePaneComponent } from './common/side-pane/side-pane.component';
 import { StudentRegistrationComponent } from './pages/student-registration/student-registration.component';
 import { HomeComponent } from './pages/home/home.component';
 import { StudentListComponent } from './pages/student-list/student-list.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { StudentListComponent } from './pages/student-list/student-list.componen
     SidePaneComponent,
     StudentRegistrationComponent,
     HomeComponent,
-    StudentListComponent
+    StudentListComponent,
+    LoginComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
