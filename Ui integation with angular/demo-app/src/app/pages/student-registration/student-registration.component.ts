@@ -10,6 +10,9 @@ import { Component } from '@angular/core';
 export class StudentRegistrationComponent {
 
 public http;
+public alertMessage: string = '';
+public showAlert: boolean = false;
+  public alertType: string = 'success';
  constructor(private httpClient:HttpClient){
   this.http = httpClient;
  }
@@ -22,6 +25,9 @@ public http;
     contactnumber:null
  }
 
+ 
+    
+
   
 
  createnewstudent(){
@@ -29,12 +35,30 @@ public http;
   
   
      this.http.post("http://localhost:8080/student",this.student)
-   .subscribe(data =>{
-       console.log(data);
-   }
+     .subscribe(
+      (data) => {
+        this.showAlertMessage('success', 'Successfully Registered!!');
+      },
+      (error) => {
+        this.showAlertMessage('danger', 'Registration failed. Please try again.');
+      }
+    );
+}
 
-  )
- }
 
 
+
+private showAlertMessage(type: string, message: string) {
+  this.alertType = type;
+  this.alertMessage = message;
+  this.showAlert = true;
+  
+  setTimeout(() => {
+    this.hideAlert();
+  }, 3000);
+}
+
+private hideAlert() {
+  this.showAlert = false;
+}
 }

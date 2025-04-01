@@ -14,7 +14,7 @@
 
 
 <form class="row g-3">
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
       <label for="inputEmail4" class="form-label">Email</label>
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
@@ -44,9 +44,21 @@
     <div class="col-md-2">
       <label for="inputZip" class="form-label">Zip</label>
       <input type="text" class="form-control" id="inputZip">
-    </div>
+    </div> -->
   
     <div class="col-12">
       <button type="submit" (click)="createnewstudent()" class="btn btn-primary" >Sign in</button>
     </div>
   </form>
+
+ 
+<br>
+
+<!-- ...existing code... -->
+<div class="alert" [ngClass]="{'show': showAlert, 'alert-success': alertType === 'success', 'alert-danger': alertType === 'danger'}" role="alert">
+  <h4 class="alert-heading">{{alertType === 'success' ? 'Well done!' : 'Error!'}}</h4>
+  <p class="mb-0">{{alertMessage}}</p>
+</div>
+<!-- ...existing code... -->
+ 
+  
